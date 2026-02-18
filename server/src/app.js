@@ -18,6 +18,8 @@ const taskRoutes = require('./routes/task.routes');
 
 const app = express();
 
+app.set('trust proxy', 1);
+
 // ─── Security Middleware ───────────────────────────────────────────────────────
 
 // Set secure HTTP headers
