@@ -62,8 +62,8 @@ const createSendTokens = (user, statusCode, res) => {
   const cookieOptions = {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
-    sameSite: 'strict',
-    maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days in ms
+    sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax', // ← changed this
+    maxAge: 30 * 24 * 60 * 60 * 1000,
   };
 
   res.cookie('refreshToken', refreshToken, cookieOptions);
