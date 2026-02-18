@@ -8,7 +8,7 @@ Supports JWT authentication, user profile management, and full CRUD on Tasks.
 ## 📁 Project Structure
 
 ```
-scalable-backend/
+Server-side/
 ├── src/
 │   ├── app.js                  # Express app setup & middleware
 │   ├── server.js               # Entry point — connects DB, starts server
@@ -71,7 +71,7 @@ npm test
 
 ### Base URL
 ```
-http://localhost:5000/api
+https://primetrade-6bhi.onrender.com/api
 ```
 
 ### Authentication
@@ -236,5 +236,3 @@ Authorization: Bearer <accessToken>
 npm test               # Run all tests with coverage
 npm test -- --watch    # Watch mode
 ```
-
-Tests use a separate test database (`scalable_app_test`) which is dropped after each run.
